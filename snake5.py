@@ -1,6 +1,6 @@
 import random, curses
 
-s = curse.initscr()
+s = curses.initscr()
 curses.curs_set(0)
 sh, sw = s.getmaxyx()
 w = curses.newwin(sh,sw,0,0)
@@ -28,7 +28,7 @@ while True:
         curses.endwin()
         quit()
     
-    new_head [snake[0][0], snake[0][1]]
+    new_head = [snake[0][0], snake[0][1]]
     
     if key == curses.KEY_DOWN:
         new_head[0] += 1
@@ -52,6 +52,6 @@ while True:
         w.addch(food[0], food[1], curses.ACS_PI)
     else:
         tail = snake.pop()
-        w.addch(tail[0], fail[1], ' ')
+        w.addch(tail[0], tail[1], ' ')
         
     w.addch(snake[0][0], snake[0][1], curses.ACS_CKBOARD)
